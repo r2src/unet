@@ -1,0 +1,60 @@
+
+UNET -- A simulation of social psychology and social network structure
+======================================================================
+
+by J.J.Vens, 2011.
+
+This is the software that was used my master thesis research, titled:
+
+The Influence of Psychological Processes on the Structure of Social Networks: An Agent-Based Simulation
+
+which can be downloaded at the following location:
+
+http://www.tilburguniversity.edu/about-tilburg-university/schools/humanities/hait/thesisseries/
+
+Thesis committee:
+Dr. Ir. P.H.M. (Pieter) Spronck
+Prof. Dr. E.O. (Eric) Postma
+
+Tilburg University
+Faculty of Humanities
+Department of Communication and Information Sciences
+Tilburg center for Cognition and Communication
+Tilburg, The Netherlands
+
+
+Compiling the program
+---------------------
+
+Make sure you have the following programs installed:
+
+ - GNU Make
+ - GNU C++ Compiler (g++)
+
+and the following libraries:
+
+ - GNU Scientific Library
+
+and typing `make` at the prompt should produce a binary file called `unet`.
+
+
+Running the program
+-------------------
+
+Invoke the program called `unet` with the following arguments:
+
+ - The population size (a positive integer)
+ - The number of links (a positive integer)
+ - Assimilation threshold (a real number between 0 and 1)
+ - Assimilation step (a real number between 0 and 1)
+ - Link threshold (a real number between 0 and 1)
+ - optionally: -v for more verbose output
+
+This will produce two streams of output, `standard error` and `standard
+output`. Standard error will show the progress of evolution of the simulated
+network of agents, along with any status messages if you used the -v
+argument. Standard output will show the statistics of the final network.
+
+During my research, I have mostly called this program repeatedly with
+varying arguments from the shell script `run.sh`, recording the output
+streams in files for further analysis.
