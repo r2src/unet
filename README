@@ -2,7 +2,16 @@
 UNET -- A simulation of social psychology and social network structure
 ======================================================================
 
-by J.J.Vens, 2011.
+by Jaap Joris Vens, 2011
+
+This program is free, public domain software. There are no restrictions for
+redistributing and/or modifying it. It comes without any warranty, to the
+extent permitted by applicable law. For more information, see:
+http://creativecommons.org/publicdomain/zero/1.0/
+
+
+Introduction
+------------
 
 This is the software that was used my master thesis research, titled:
 
@@ -54,6 +63,10 @@ This will produce two streams of output, `standard error` and `standard
 output`. Standard error will show the progress of evolution of the simulated
 network of agents, along with any status messages if you used the -v
 argument. Standard output will show the statistics of the final network.
+
+
+Batch invocation
+----------------
 
 During my research, I have mostly called this program repeatedly with
 varying arguments from the shell script `run.sh`, recording the output

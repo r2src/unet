@@ -2,7 +2,7 @@
 
 UNET -- A simulation of social psychology and social network structure
 
-by J.J.Vens, 2010  
+by J.J.Vens, 2011
 
 */
 
@@ -10,9 +10,7 @@ by J.J.Vens, 2010
 #include "agent.h"
 #include "link.h"
 
-#define MAXIMUM_ITERATIONS 100
-#define MINIMUM_ITERATIONS 10
-#define ITERATION_TRESHOLD 0.001
+#define MAXIMUM_ITERATIONS 25
 
 // global stuff
 gsl_rng *r;
@@ -125,11 +123,11 @@ int main(int argc, char *argv[])
   }
   
   if (verbose) cerr << "Successfully created random network!\n";
+  
   if (verbose) cerr << "Proceeding with updating the network by social psychological processes...\n";
     
   // now let the fun begin!
   cerr << "#Iteration Removed Links         Density    Cluster.   Assort.\n";
-
   int i = 0;
   int removed = 0;
   do
@@ -142,8 +140,6 @@ int main(int argc, char *argv[])
     fprintf (stderr, "%-11.2f", assortativity(relation));
     // fprintf (stderr, "%-11.2f", avgpath(population_size, population));
     cerr << endl;
-    
-    removed = 0;
     
     // loop over all agents:
     for (int j=0; j<population_size; j++)
@@ -170,7 +166,6 @@ int main(int argc, char *argv[])
           removed++;
 
           // REMOVE THE FOLLOWING TO PREVENT AUTOMATIC NEW LINKS
-
           do
           { // assign both pointers the address of a random agent:
             random_agent1 = &population[ gsl_rng_uniform_int(r,population_size) ];
@@ -193,7 +188,7 @@ int main(int argc, char *argv[])
   } while ( i <= MAXIMUM_ITERATIONS );
   
   if (verbose) cerr << "Sending results to STDOUT...\n";
-/*
+
   // print model parameters and final network statistics
   cout << "pop_size nr_links ass_tres ass_step lnk_tres itrtions rel_size density  clustrng assrtvty avgpath\n";
   printf ("%-9d", population_size);
@@ -209,7 +204,13 @@ int main(int argc, char *argv[])
   printf ("%-9.2f", avgpath(population_size, population));
 
   cout << endl;
-*/
+
+  // calculate assortativity
+//  printf ("Assortativity: %-11.2f\n", assortativity(relation));
+
+  // calculate mean path length:
+//  cout << "Mean path length: " << avgpath(population_size, population) << endl;
+
   exit(0);
 }
 
