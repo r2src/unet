@@ -6,7 +6,7 @@ by Jaap Joris Vens, 2011
 
 This program is free, public domain software. There are no restrictions for
 redistributing and/or modifying it. It comes without any warranty, to the
-extent permitted by applicable law. For more information, see:
+extent permitted by applicable law. For more information, see: 
 http://creativecommons.org/publicdomain/zero/1.0/
 
 
@@ -15,21 +15,21 @@ Introduction
 
 This is the software that was used my master thesis research, titled:
 
-The Influence of Psychological Processes on the Structure of Social Networks: An Agent-Based Simulation
+*The Influence of Psychological Processes on the Structure of Social Networks: An Agent-Based Simulation*
 
 which can be downloaded at the following location:
 
 http://www.tilburguniversity.edu/about-tilburg-university/schools/humanities/hait/thesisseries/
 
-Thesis committee:
-Dr. Ir. P.H.M. (Pieter) Spronck
-Prof. Dr. E.O. (Eric) Postma
+Thesis committee: 
+Dr. Ir. P.H.M. (Pieter) Spronck 
+Prof. Dr. E.O. (Eric) Postma 
 
-Tilburg University
-Faculty of Humanities
-Department of Communication and Information Sciences
-Tilburg center for Cognition and Communication
-Tilburg, The Netherlands
+Tilburg University 
+Faculty of Humanities 
+Department of Communication and Information Sciences 
+Tilburg center for Cognition and Communication 
+Tilburg, The Netherlands 
 
 
 Compiling the program
